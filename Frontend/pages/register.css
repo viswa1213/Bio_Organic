@@ -5,6 +5,11 @@
    
 }
 body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;           /* full viewport height */
+      margin: 0;   
       background-image: url('./assets/bg.jpg');
       background-size: cover;
       background-position: center;
@@ -15,12 +20,8 @@ body{
     position: relative;
     width: 300px;
     height: 400px;
-    margin: 20px;
     box-shadow: 0 5px 5px rgb(14, 13, 13);
     border-radius: 10px;
-    left: 35%;
-    top: 50%;
-    margin-top: 80px;
     background-color: white;
     background-image: url(./assets/bg.jpg);
     background-size: cover;
@@ -70,4 +71,66 @@ body{
 }
 .wrapper .login a{
     color: blue;
+}
+
+
+/* popup  */
+#pop-up{
+ display: flex;
+ position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0); /* dim background */
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#pop-up-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 250px;
+    width: 350px;
+    bottom: 20%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 3px 3px 3px black;
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#content{
+    position: absolute;
+    display: flex;
+    border-radius: 70px;
+    height: 200px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+#popup-message{
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+#btn{
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    left: 40%;
+    font-size: larger;
+    background-color: white;
+    cursor: grabbing;
+
+}
+#btn:hover{
+    background-color: green;
+    font-size: small;
 }

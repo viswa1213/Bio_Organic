@@ -7,18 +7,37 @@ form.addEventListener('submit',async function (e){
         Password : form.Password.value,
     };
     console.log(formdata.Email);
-    const res = await fetch('http://localhost:3000/register',{
+    try{
+        const res = await fetch('http://localhost:3000/register',{
         method : 'POST',
         headers : {'content-type' : 'application/json'},
         body : JSON.stringify(formdata)
     });
     const result = await res.json();
     if(res.ok){
-         alert(result.message);
-         window.location.href = './login.html';
+         showpopup(result.message);
+         setTimeout(() => {
+             window.location.href = './login.html';
+         }, timeout);
     }
     else{
 
-        alert(result.message || 'Login Failed');
+        showpopup(result.message || 'Login Failed');
     }
+    }
+    catch(e){
+                showpopup('Server Error');
+    }
+   
 })
+
+// pop-up function:
+
+function showpopup(message){
+    document.getElementById('popup-message').innerText = message;
+    document.getElementById('pop-up').style.display = 'flex';
+}
+
+function closepopup(){
+    document.getElementById('pop-up').style.display = 'none';
+}
