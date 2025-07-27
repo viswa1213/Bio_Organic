@@ -8,7 +8,7 @@ form.addEventListener('submit',async function (e){
     };
     console.log(formdata.Email);
     try{
-const res = await fetch('http://localhost:3000/login',{
+        const res = await fetch('http://localhost:3000/login',{
         method : 'POST',
         headers : {'content-type' : 'application/json'},
         body : JSON.stringify(formdata)
