@@ -82,7 +82,7 @@ body{
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0); /* dim background */
+  background-color: transparent; /* dim background */
   display: none; 
   justify-content: center;
   align-items: center;
