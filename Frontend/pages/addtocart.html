@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="addtocart.css" />
+  </head>
+  <body>
+    <div class="addtocart">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sno</th>
+            <th>Product-Image</th>
+            <th>product-Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Add/Delete</th>
+          </tr>
+        </thead>
+        <tbody class="cart-body">
+          <!-- <tr>
+            <td>
+              <img
+                class="contet-img"
+                style="width: 60px; height: 60px; border-radius: 10px"
+                src="pd1.webp"
+                alt=""
+              />
+            </td>
+            <td class="product">Alovera Gel</td>
+            <td class="price">150</td>
+            <td class="quantity">2</td>
+            <td>
+              <button class="Add">Add</button>
+              <button class="Delete">Delete</button>
+            </td>
+          </tr> -->
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3"></td>
+            <td>Total</td>
+            <td class="Total">$0</td>
+            <td><button class="Check-out">Checkout</button></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h1 class="show-name"></h1>
+
+    <script>
+      const name = localStorage.getItem("pname");
+      const price = localStorage.getItem("pprice");
+      const img = localStorage.getItem("pimage");
+
+      const tbody = document.querySelector(".cart-body");
+      let total = 0;
+
+      if (name && price) {
+        total += Number(price);
+      }
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>1</td>
+        <td><img src="${img}" alt="${name}" style="width: 60px; height: 60px; border-radius: 10px;"></td>
+        <td class="product">${name}</td>
+        <td class="price">${price}</td>
+        <td class="quantity">1</td>
+        <td>
+          <button class="Add">Add</button>
+          <button class="Delete" onclick="this.closest('tr').remove()">Delete</button>
+        </td>
+      `;
+
+      row.querySelector(".Add").addEventListener("click", function () {
+        const quantitycell = row.querySelector(".quantity");
+        let quantity = parseInt(quantitycell.innerText);
+        quantity++;
+        row.querySelector(".quantity").innerText = quantity;
+
+        total += Number(price);
+        document.querySelector(".Total").textContent = `$${total}`;
+      });
+
+      tbody.appendChild(row);
+
+      document.querySelector(".Total").textContent = `$${total}`;
+    </script>
+  </body>
+</html>

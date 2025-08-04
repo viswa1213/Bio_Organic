@@ -89,6 +89,8 @@ body{
     display: flex;
 }
 .card .content .price{
+    text-decoration: none;
+    font-weight: normal;
     display: inline-block;
     color: rgb(0, 0, 0);
     margin-right: 10px;
@@ -100,6 +102,15 @@ body{
      color: white;
      height: 40px;
      margin-left: 30px;
+}
+.details #addtocart{
+    text-align: center;
+    white-space: nowrap;          /* Prevents text from wrapping */
+  overflow: hidden;             /* Hides anything outside the button */
+  text-overflow: ellipsis;      /* Adds "..." if text overflows */
+  max-width: 100px;             /* Set a max width (adjust as needed) */
+  padding: 8px 12px;            /* Add padding for nice spacing */
+  font-size: 13px; 
 }
 .details #buy{
     position: relative;
