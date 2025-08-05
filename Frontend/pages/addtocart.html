@@ -43,7 +43,7 @@
           <tr>
             <td colspan="3"></td>
             <td>Total</td>
-            <td class="Total"></td>
+            <td class="Total">0</td>
             <td><button class="Check-out">Checkout</button></td>
           </tr>
         </tfoot>
@@ -62,8 +62,9 @@
     cart.forEach((item, index) => {
       const row = document.createElement("tr");
 
-      const itemTotal = parseInt(item.price) * item.quantity;
+      const itemTotal = parseInt(item.price.replace('$', '').trim()) * parseInt(item.quantity || 1);
       total += itemTotal;
+      console.log(total);
 
       row.innerHTML = `
        <td></td>
@@ -88,10 +89,8 @@
     });
 
     // Optional: update total price somewhere on the page
-    const totalElement = document.getElementById("totalPrice");
-    if (totalElement) {
-      totalElement.innerText = `Total: ₹${total}`;
-    }
+    const totalElement = document.querySelector(".Total");
+    totalElement.innerText = `$${total}`;
   }
 
   function increment(index) {
@@ -100,7 +99,7 @@
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
   }
-
+  
   function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1);
@@ -110,7 +109,5 @@
 
   window.onload = loadCart;
 </script>
-
-
 </body>
 </html>
