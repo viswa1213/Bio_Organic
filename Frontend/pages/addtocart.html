@@ -43,7 +43,7 @@
           <tr>
             <td colspan="3"></td>
             <td>Total</td>
-            <td class="Total">$0</td>
+            <td class="Total"></td>
             <td><button class="Check-out">Checkout</button></td>
           </tr>
         </tfoot>
@@ -51,44 +51,66 @@
     </div>
     <h1 class="show-name"></h1>
 
-    <script>
-      const name = localStorage.getItem("pname");
-      const price = localStorage.getItem("pprice");
-      const img = localStorage.getItem("pimage");
+   <script>
+  function loadCart() {
+    const cartBody = document.querySelector(".cart-body");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
 
-      const tbody = document.querySelector(".cart-body");
-      let total = 0;
+    cartBody.innerHTML = ""; // Clear table before reloading
 
-      if (name && price) {
-        total += Number(price);
-      }
-
+    cart.forEach((item, index) => {
       const row = document.createElement("tr");
+
+      const itemTotal = parseInt(item.price) * item.quantity;
+      total += itemTotal;
+
       row.innerHTML = `
-        <td>1</td>
-        <td><img src="${img}" alt="${name}" style="width: 60px; height: 60px; border-radius: 10px;"></td>
-        <td class="product">${name}</td>
-        <td class="price">${price}</td>
-        <td class="quantity">1</td>
+       <td></td>
         <td>
-          <button class="Add">Add</button>
-          <button class="Delete" onclick="this.closest('tr').remove()">Delete</button>
+          <img
+            class="contet-img"
+            style="width: 60px; height: 60px; border-radius: 10px"
+            src="${item.image}"
+            alt=""
+          />
+        </td>
+        <td class="product">${item.name}</td>
+        <td class="price">${item.price}</td>
+        <td class="quantity">${item.quantity}</td>
+        <td>
+          <button class="Add" onclick="increment(${index})">Add</button>
+          <button class="Delete" onclick="removeItem(${index})">Delete</button>
         </td>
       `;
 
-      row.querySelector(".Add").addEventListener("click", function () {
-        const quantitycell = row.querySelector(".quantity");
-        let quantity = parseInt(quantitycell.innerText);
-        quantity++;
-        row.querySelector(".quantity").innerText = quantity;
+      cartBody.appendChild(row);
+    });
 
-        total += Number(price);
-        document.querySelector(".Total").textContent = `$${total}`;
-      });
+    // Optional: update total price somewhere on the page
+    const totalElement = document.getElementById("totalPrice");
+    if (totalElement) {
+      totalElement.innerText = `Total: ₹${total}`;
+    }
+  }
 
-      tbody.appendChild(row);
+  function increment(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart[index].quantity += 1;
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
 
-      document.querySelector(".Total").textContent = `$${total}`;
-    </script>
-  </body>
+  function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+  }
+
+  window.onload = loadCart;
+</script>
+
+
+</body>
 </html>

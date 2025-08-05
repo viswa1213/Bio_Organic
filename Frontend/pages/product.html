@@ -239,31 +239,42 @@
 
     </div>
 
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navLinks = document.getElementById("Navbar-links");
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("Navbar-links");
 
-      hamburger.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 
-       function savedata(button) {
-    // Find the nearest card to the clicked button
+  function savedata(button) {
     const card = button.closest(".card");
 
-    // Extract data from that specific card
     const pimage = card.querySelector(".pimage").getAttribute('src');
     const pname = card.querySelector(".pname").innerText;
     const pprice = card.querySelector(".price").innerText;
 
-    // Store in localStorage
-    localStorage.setItem("pimage", pimage);
-    localStorage.setItem("pname", pname);
-    localStorage.setItem("pprice", pprice);
+    // Get the existing cart array from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // Redirect to cart page
+    // Check if item already exists in cart
+    const existingItem = cart.find(item => item.name === pname);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      cart.push({
+        name: pname,
+        price: pprice,
+        image: pimage,
+        quantity: 1
+      });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
     window.location.href = "./addtocart.html";
   }
-    </script>
+</script>
+
   </body>
 </html>
