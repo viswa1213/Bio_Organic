@@ -6,7 +6,6 @@ form.addEventListener('submit',async function (e){
         Email : form.Email.value,
         Password : form.Password.value,
     };
-    console.log(formdata.Email);
     try{
         const res = await fetch('http://localhost:3000/register',{
         method : 'POST',
@@ -18,7 +17,7 @@ form.addEventListener('submit',async function (e){
          showpopup(result.message);
          setTimeout(() => {
              window.location.href = './login.html';
-         }, timeout);
+         }, 3000);
     }
     else{
 

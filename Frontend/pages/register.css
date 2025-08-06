@@ -10,7 +10,7 @@ body{
       align-items: center;
       height: 100vh;           /* full viewport height */
       margin: 0;   
-      background-image: url('./assets/bg.jpg');
+      background-image: url('./assets/bg_login7.jpg');
       background-size: cover;
       background-position: center;
 }
@@ -23,7 +23,7 @@ body{
     box-shadow: 0 5px 5px rgb(14, 13, 13);
     border-radius: 10px;
     background-color: white;
-    background-image: url(./assets/bg.jpg);
+    background-image: url(./assets/bg_login7.jpg);
     background-size: cover;
     background-position: center;
 } 
@@ -47,17 +47,25 @@ body{
      justify-content: center;
      margin-top: 80px;
 }
+.login .form label input{
+    background-color: black;
+}
 .login input{
     font-size: 18px;
     height: 30px;
     display: flex;
     border: 2px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
     outline: none;
     box-shadow: 0 3px 3px black;
+    color: white;
+    padding-left: 10px;
+    font-size: 15px;
 }
 .login input::placeholder{
     color: white;
+    font-size: 10px;
+    padding-left: 20px;
 }
 .login h1{
     margin-bottom: 10px;
@@ -71,7 +79,7 @@ body{
     height: 40px;
 }
 .wrapper .login a{
-    color: blue;
+    color: white;
 }
 
 
