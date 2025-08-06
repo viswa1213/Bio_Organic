@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Aloe Vera Gel",
+    "price": 150,
+    "image": "../pages/assets/pd1.webp"
+  },
+  {
+    "name": "Neem Soap",
+    "price": 90,
+    "image": "../pages/assets/pd2.webp"
+  },
+  {
+    "name": "Rose Water",
+    "price": 120,
+    "image": "../pages/assets/pd3.webp"
+  }
+]
