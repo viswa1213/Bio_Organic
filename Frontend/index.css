@@ -163,3 +163,11 @@ section
 #login .log{
     margin-bottom: 100px;
 }
+
+
+@media screen and (max-width : 600px) {
+
+    body{
+        overflow-x: hidden;
+    }
+}

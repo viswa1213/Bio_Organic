@@ -66,7 +66,7 @@ body{
     border-bottom: 2px solid white;
 }
 
-
+/* add to cart page style */
 .addtocart{
       display: flex;
       flex-direction: column;
@@ -162,4 +162,16 @@ body{
 .addtocart .cart-body .cart-button{
     text-align: center;
     vertical-align: middle;
+}
+@media screen and (max-width : 600px) {
+.addtocart{
+      overflow-x: auto;
+    display: block;
+}
+.table{ 
+        width: 100%;
+    min-width: 600px; 
+    border-collapse: collapse;
+
+}
 }
