@@ -114,7 +114,7 @@
         <td class="quantity">${item.quantity}</td>
         <td class = "cart-button">
           <button class="Add" onclick="increment(${index})">Add</button>
-          <button class="Delete" onclick="removeItem(${index})">Delete</button>
+          <button class="Delete" onclick="Delete(${index})">Delete</button>
         </td>
       `;
 
@@ -139,6 +139,19 @@
     localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
   }
+  function Delete(index){
+              let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+              if(cart[index].quantity > 1 ){
+                   cart[index].quantity -= 1;
+                   document.querySelector(".Total").innerText = cart[index].quantity;
+              }
+              else{
+                cart.splice(index,1);
+              }
+              localStorage.setItem("cart" , JSON.stringify(cart));
+              loadCart();
+  } 
 
   window.onload = loadCart;
 </script>
