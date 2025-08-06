@@ -7,11 +7,66 @@
 body{
     height: 100vh;
     width: 100vw;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
 }
+
+/* addtocart */
+.navbar 
+{
+    background-color: green;
+   
+}
+.navbar-brand
+{
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.navbar img{
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+}
+.btn
+{
+    color: aliceblue;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-radius: 10px;
+}
+.btn:hover
+{
+    color: green;
+    background-color: #fff;
+}
+#navbar
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5px 5px;    
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+#navbarSupportedContent
+{
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover
+{
+    border-bottom: 2px solid white;
+}
+
+
 .addtocart{
       display: flex;
       flex-direction: column;
@@ -43,8 +98,16 @@ body{
 .addtocart .cart-body .Add{
     background-color: rgb(219, 230, 230);
     height: 30px;
-    width: 30px;
+    width: 35px;
     border-radius: 5px;
+}
+.addtocart .cart-body .Add.Add:hover{
+    background-color: green;
+    color: white;
+}
+.addtocart .cart-body .Delete:hover{
+    background-color: green;
+    color: white;
 }
 .addtocart .cart-body .Delete{
     background-color: rgb(219, 230, 230);
@@ -56,12 +119,23 @@ body{
 .addtocart .cart-body .product{
     text-decoration: underline;
     font-size: large;
+    text-align: center;
+    vertical-align: middle;
+}
+.addtocart .cart-body .product:hover{
+          cursor: pointer;
+
 }
 .addtocart .cart-body .quantity{
     font-size: large;
     font-weight: bolder;
+    text-align: center;
+    vertical-align: middle;
 }
-
+.addtocart .cart-body .sno{
+    text-align: center;
+    vertical-align: middle;
+}
 .addtocart tfoot td{
     padding: 30px;
 }
@@ -74,4 +148,18 @@ body{
     border-radius: 30px;
     background-color: green;
     color: aliceblue;
+}
+.addtocart tfoot{
+    background-color: white;
+}
+.addtocart table{
+    border-radius: 30px;
+}
+.addtocart .cart-body .price{
+    text-align: center;
+     vertical-align: middle;
+}
+.addtocart .cart-body .cart-button{
+    text-align: center;
+    vertical-align: middle;
 }
