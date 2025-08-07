@@ -171,3 +171,79 @@ section
         overflow-x: hidden;
     }
 }
+
+/* ----------------------------------------footer--------------------------------------------- */
+
+footer {
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #9be3a7;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+body::-webkit-scrollbar{
+    color: green;
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    background:#eee;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:  green;
+    border-radius: 10px;
+}
