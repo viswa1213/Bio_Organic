@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar 
+{
+    background-color: green;
+   
+}
+.navbar-brand
+{
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.navbar img{
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+}
+.btn
+{
+    color: aliceblue;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-radius: 10px;
+}
+.btn:hover
+{
+    color: green;
+    background-color: #fff;
+}
+#navbar
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5px 5px;    
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+#navbarSupportedContent
+{
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover
+{
+    border-bottom: 2px solid white;
+}
+/* cards pages styles  */
+
+.totalcards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: center;
+}
+.card{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    box-shadow: 3px 4px 12px rgba(0, 0, 0, 0.15);
+}
+.card .content img{
+    width: 100%;
+    margin-top: 5px;
+    height: 150px;
+    object-fit: cover;
+}
+.card .content p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    text-decoration: underline;
+}
+.content .details{
+    display: flex;
+}
+.card .content .price{
+    text-decoration: none;
+    font-weight: normal;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    /* margin-right: 20px; */
+    margin-left: 10px;
+}
+.details .btn{
+     display: inline-block;
+     position: relative;
+     left: 30%;
+     background-color: black;
+     color: white;
+     height: 40px;
+}
+.details #addtocart{
+    text-align: center;
+    white-space: nowrap;          /* Prevents text from wrapping */
+  overflow: hidden;             /* Hides anything outside the button */
+  text-overflow: ellipsis;      /* Adds "..." if text overflows */
+  max-width: 100px;             /* Set a max width (adjust as needed) */
+  padding: 8px 12px;            /* Add padding for nice spacing */
+  font-size: 13px; 
+}
+.details #buy{
+    position: relative;
+    left: 30%;
+    margin-right: 20px;
+}
+

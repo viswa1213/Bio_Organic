@@ -1,0 +1,249 @@
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden; 
+}
+.navbar 
+{
+    background-color: green;
+   
+}
+.navbar-brand
+{
+    color: white;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 800;
+}
+.navbar img{
+    height: 50px;
+    width: 50px;
+    border-radius: 40px;
+}
+.btn
+{
+    color: aliceblue;
+    border-color: aliceblue;
+    border-width: 3px;
+    border-radius: 10px;
+}
+.btn:hover
+{
+    color: green;
+    background-color: #fff;
+}
+#navbar
+{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 5px 5px;    
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+#navbarSupportedContent
+{
+    color: #fff;
+    border-bottom: 2px solid transparent;
+}
+#navbarSupportedContent a:hover
+{
+    border-bottom: 2px solid white;
+}
+section
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home
+{
+    background-image: url(./assets/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#home h1
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 0px 1px 0px green,0px 2px 0px wheat,0px 3px 0px green,
+    0px 4px 0px white,0px 5px 0px green,0px 6px 0px white;
+}
+#home p
+{
+    font-size: 20px;
+    font-weight: 800;
+}
+#home .input-group
+{
+    width: 40%;
+    height: 45px;   
+}
+#home .form-control
+{
+    border-color: black;
+}
+#home .signin
+{
+    border-color: black;
+    border-radius: 0%;
+    border-width: 1px;
+    color: green;
+}
+#home .signin:hover
+{
+    background-color: green;
+    color: #fff;
+}
+#contact 
+{
+    background-image: url(./assets/pawel-czerwinski--0xCCPIbl3M-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#contact input
+{
+    background-color: transparent;
+    margin: 10px;
+    width: 200px;
+}
+#contact button
+{
+    margin-left: 10px;
+}
+#contact input::placeholder
+{
+    color: #fff;
+}
+#contact input[type=text]
+{
+    color: #fff;
+}
+#contact i 
+{
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 20px;
+   
+}
+/* ----------------------------------------login---------------------------------------- */
+#login
+{
+    background-image: url(ophelie-authier-MtoudfurFlw-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+}
+#login .log
+{
+    background-color:transparent;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+}
+#login .log:hover
+{
+    background-color:white;
+    color: rgb(43, 225, 43);
+}
+#login .log{
+    margin-bottom: 100px;
+}
+
+
+@media screen and (max-width : 600px) {
+
+    body{
+        overflow-x: hidden;
+    }
+}
+
+/* ----------------------------------------footer--------------------------------------------- */
+
+footer {
+    width: 100%;
+    background-color: #121212;
+    color: white;
+    padding: 40px 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  color: #9be3a7;
+  margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 20px;
+  color: #aaa;
+}
+
+body::-webkit-scrollbar{
+    color: green;
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    background:#eee;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:  green;
+    border-radius: 10px;
+}
