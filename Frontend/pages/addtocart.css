@@ -148,6 +148,7 @@ body{
     border-radius: 30px;
     background-color: green;
     color: aliceblue;
+    margin-left: 20px;
 }
 .addtocart tfoot{
     background-color: white;

@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   background-image: url(./assets/aboutus_bg2.jpg);
+   background-position: center;
+   background-size: cover;
+   display: flex;
+}
+
+.check-out{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 900px;
+    background-image: url(./assets/aboutus_bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: white;
+    justify-content: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.Qr-code-img{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin-top: 20px;
+    background-image: url(./assets/Qr-code.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 10px black;
+}
+.details{
+    display: flex;
+    height: 200px;
+    width: 550px;
+    background-color: transparent;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    /* box-shadow: 0px 0px 10px black; */
+}
+.content-user{
+    height: 180px;
+    width: 300px;
+    background-color: transparent;
+    color: darkgreen;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+.check-out .content-cart{
+    height: 180px;
+    width: 250px;
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+.check-out .content-cart::-webkit-scrollbar{
+    width:3px ;
+    height: 5px;
+}
+.check-out .content-cart::-webkit-scrollbar-track{
+    background-color: white;
+    border-radius: 20px;
+}
+.check-out .content-cart::-webkit-scrollbar-thumb{
+    background-color: green;
+    height: 5px;
+}
+.user-details{
+    display: flex;
+    gap: 2px;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.user-details .Address{
+    width: 200px;
+    height: 65px;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
+.user-details input{
+   border-radius: 5px;
+   padding-left: 10px;
+   background-color: white;
+}
+.user-details input::placeholder{
+    color: green;
+    font-size: 9px;
+}
+.user-details #Address{
+    background-color: white;
+} 
+
+.user-details .content-cart .cart-details{
+    display: flex;
+    color: white;
+    padding: 0px;
+}
+.content-cart .footer-ordersummary,h3{
+    height: 20px;
+    background-color: green;
+    position: sticky;
+    z-index: 1;
+    color: white;
+}
+.cart-details  h3{
+    top: 0;
+    text-align: center;
+    border-radius: 5px;
+}
+.cart-details .footer-ordersummary{
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    box-shadow: opx opx 10px black;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-weight: bold;
+    padding-right: 30px;
+
+}
+.cart-details table{
+    align-items: center;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border: 1;
+}
+ .payment-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 220px;
+    width: 850px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+.payment-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    height: 180px;
+    width: 800px;
+    background-color: transparent;
+    border-radius: 10px;
+    color: green;
+}
+.payment-footer .upi{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-left: 20px;
+    align-items: center;
+}
+.payment-footer .cashonDelivery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 50px;
+}
+.payment-details .upi .upi-btn{
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+.payment-details .upi input[type = "text"]{
+    height: 30px;
+    border-radius: 20px;
+    padding:10px;
+}
+.payment-details .upi input[type="text"]::placeholder{
+    color: darkgreen;
+}
+.payment-details .cashonDelivery .cod-btn{
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+.payment-footer .cashonDelivery input[type ="radio"]{
+    margin-left: 20px;
+    height: 20px;
+    width: 20px;
+}
